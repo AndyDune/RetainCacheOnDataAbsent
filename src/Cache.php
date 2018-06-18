@@ -30,6 +30,13 @@ class Cache implements CacheInterface
 
     protected $version = 1;
 
+    /**
+     * Cache constructor.
+     *
+     *
+     * @param CacheInterface $cacheAdapter
+     * @param callable|null $extractor
+     */
     public function __construct(CacheInterface $cacheAdapter, callable $extractor = null)
     {
         $this->cacheAdapter = $cacheAdapter;
@@ -46,6 +53,12 @@ class Cache implements CacheInterface
     }
 
 
+    /**
+     * Set default ttl
+     *
+     * @param int $ttl
+     * @return Cache
+     */
     public function setDefaultTtl($ttl)
     {
         $this->defaultTtl = $ttl;
