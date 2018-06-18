@@ -55,7 +55,7 @@ class Cache implements CacheInterface
 
     protected function buildMetaDataKey($key)
     {
-        return $key . '_' . Cache::class;
+        return $key . '_' . md5(Cache::class);
     }
 
     /**
