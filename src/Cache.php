@@ -3,6 +3,10 @@
  *
  * PHP version >= 5.6
  *
+ * For reference:
+ * https://github.com/php-fig/simple-cache
+ * https://symfony.com/doc/current/components/cache
+ *
  * @package andydune/retain-cache-on-data-absent
  * @link  https://github.com/AndyDune/RetainCacheOnDataAbsent for the canonical source repository
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
