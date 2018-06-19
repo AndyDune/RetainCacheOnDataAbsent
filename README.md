@@ -7,3 +7,27 @@
 
 
 Code allow restore data in cache if new data can not be retrieved.
+
+Installation
+------------
+
+Installation using composer:
+
+```
+composer require andydune/retain-cache-on-data-absent
+```
+Or if composer was not installed globally:
+```
+php composer.phar require andydune/retain-cache-on-data-absent
+```
+Or edit your `composer.json`:
+```
+"require" : {
+     "andydune/retain-cache-on-data-absent": "^1"
+}
+
+```
+And execute command:
+```
+php composer.phar update
+```

@@ -51,10 +51,12 @@ class Cache implements CacheInterface
 
     /**
      * @param callable $extractor
+     * @return Cache
      */
     public function setDataExtractor(callable $extractor)
     {
         $this->dataExtractor = $extractor;
+        return $this;
     }
 
 
