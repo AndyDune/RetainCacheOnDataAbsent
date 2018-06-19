@@ -58,6 +58,14 @@ class CacheTest extends TestCase
         $date = $cache->get('date');
         $this->assertEquals(2, $dataExtractor->getUsed());
 
+
+        $dataPrev = $dataExtractor->getData(false);
+        $dataExtractor->setDate('');
+        $cacheAdapter->delete($cache->buildMetaDataKey('date'));
+        $date = $cache->get('date');
+        $this->assertEquals(3, $dataExtractor->getUsed());
+        $this->assertEquals($date, $dataPrev);
+
         $tempDir->delete();
     }
 }
