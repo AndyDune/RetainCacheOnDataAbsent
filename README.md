@@ -31,3 +31,15 @@ And execute command:
 ```
 php composer.phar update
 ```
+
+Problem
+----------
+
+Yor script gets data from external API. For example currency rate from [crr](https://github.com/AndyDune/CurrencyRateCbr).
+
+There is no need to extract data every time it is needed. 
+So we are using cache. But what will be if cache get old, but no data appears from api? 
+There is network error or bank site breakage.
+
+This little library helps to avoid data absent from retriever. 
+Cached data do not expires and if no new data appears it uses old data from cache.       
