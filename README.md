@@ -42,4 +42,22 @@ So we are using cache. But what will be if cache get old, but no data appears fr
 There is network error or bank site breakage.
 
 This little library helps to avoid data absent from retriever. 
-Cached data do not expires and if no new data appears it uses old data from cache.       
+Cached data do not expires and if no new data appears it uses old data from cache. 
+
+Using
+-------
+
+```php
+use Symfony\Component\Cache\Simple\FilesystemCache;
+use AndyDune\RetainCacheOnDataAbsent\Cache;
+
+$cacheAdapter = new FilesystemCache('test', 3600, 'root cache dir');
+$cache = new Cache($cacheAdapter, function () {
+    /*
+        $data = false; // no data - return data from old cache
+        $data = 'very useful data to cache and use'; // update cache and return this data
+    */
+    return $data;
+});
+$result = $cache->get('data'); // use any key - it is used only for cache key 
+```      
