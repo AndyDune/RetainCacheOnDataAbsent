@@ -51,7 +51,7 @@ Using
 use Symfony\Component\Cache\Simple\FilesystemCache;
 use AndyDune\RetainCacheOnDataAbsent\Cache;
 
-$cacheAdapter = new FilesystemCache('test', 3600, 'root cache dir');
+$cacheAdapter = new FilesystemCache('test', 3600, '<root cache dir>');
 $cache = new Cache($cacheAdapter, function () {
     /*
         $data = false; // no data - return data from old cache
