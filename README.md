@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/andydune/retain-cache-on-data-absent.svg?style=flat-square)](https://packagist.org/packages/andydune/retain-cache-on-data-absent)
 
 
-Code allow restore data in cache if new data can not be retrieved.
+It allows to restore data in cache if new data can not be retrieved.
 
 Installation
 ------------
